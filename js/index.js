@@ -206,7 +206,7 @@ let rand1 = Math.random();
      rand1*=10;
      rand1 = Math.round(rand1);
      console.log(rand1)
-
+//? string
 
 
 
