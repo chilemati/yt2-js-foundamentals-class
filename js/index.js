@@ -208,5 +208,159 @@ let rand1 = Math.random();
      console.log(rand1)
 //? string
 
+/* 
+  let str = 'value';
+*/
+
+let str1= 'Chile';
+let str2 = "Amadi"
+console.log(str1,typeof str1)
+console.log(str2,typeof str2)
+
+console.log(str1.length);
+
+/* 
+  index  01234
+  string Chile
+  length 12345
+
+  stringName[validIndex]
+*/
+
+console.log(str1[2]);
+str1= str1.replace('i','a'); // replacing i with a
+str1= str1.replace('le','lie'); // replacing le with lie
+str1= str1.replace('Ch','');//  deleting Ch with ''
+
+console.log(str1)
+
+console.log(str2.split('a')[0])
+
+// + or .concat
+
+console.log(str1 + ' ' + str2);
+console.log(str1.concat(' ').concat(str2))
+
+let fullName = 'John Doe';
+let favouriteColor = 'Yellow';
+let country = 'Kenya';
+
+// My name is Amadi Chile. My Favourite Color is  purple and I come from Chile.
+
+/* 
+  "My name is"
+  fullName
+  "."
+  " My Favourite Color is  "
+  favouriteColor
+  " and I come from "
+  country
+
+*/
+
+console.log(
+  "My name is " +
+  fullName +
+  "." +
+  " My Favourite Color is  " +
+  favouriteColor +
+  " and I come from " +
+  country
+);
+
+// template string uses backtick or ``
+
+/* 
+  how to use backtick to dynamically inject a varible into a string
+
+  ${variableName}
+*/
+
+console.log(`My name is ${fullName}. My Favourite Color is ${favouriteColor} and I come from ${country}. `);
+
+console.log(str2.includes('a'))
+console.log(str2.indexOf('a'))
+
+//? arrays
+
+/* let arrayName = [item1,item2]; */
+
+let Ages = [33,44,77,969,'Apple',null,false];
+
+console.log(Ages);
+console.log(Ages[4])
+console.log(Ages[1])
+console.log(Ages.length)
+
+// some array methods
+
+Ages.pop(); // removes the last item
+Ages.push(1000); // adds an item from behind
+Ages.shift(); // removes the first item
+Ages.unshift(1914); // adds an item ffrom the start
+
+
+console.log(Ages.includes(969))
+console.log(Ages.indexOf(969))
+
+// splice
+
+/* 
+  arrayName.splice(validIndex,type,items);
+
+  validIndex: is a number less than the array length
+  type 0: add to the array with length expansion
+  type 1: add to the array without length expansion
+  items: values to be added
+*/
+
+console.log(Ages.splice(1,1,144)); // replaces 44 with 144
+console.log(Ages.splice(2,1,)); // deletes 77 
+console.log(Ages.splice(2,0,2024,'Banana',null)); // add 2024 to index 2 
+console.log(Ages);
+
+
+// ? object
+
+/* let objectName = {
+  key: value,
+  key: value,
+} 
+*/
+
+let User = {
+  firstName: 'Chile',
+  lastName: 'Amadi',
+  email: 'amadichile@gmail.com',
+  'user name': 'chilemati'
+}
+
+// ObjecName.key
+// ObjectName['key'];
+
+let objecKey = 'email';
+
+console.log(User.firstName)
+console.log(User['lastName']);
+console.log(User["user name"])
+console.log(User[objecKey])
+
+// adding new items to an object
+
+/* 
+  ObjectName.key = value;
+*/
+
+// User.gender = 'Male';
+// User.age = 969;
+
+Object.assign(User,{gender: 'Male',age: 969,Country: 'Chile'});
+
+delete User.email;
+
+console.log(User)
+
+
+
 
 
